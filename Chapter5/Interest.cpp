@@ -17,11 +17,5 @@ int main() {
         // cout << "The amount on deposit after " << i << " year(s) is " << fixed << setprecision(2) << deposit << endl;
         cout << "The amount on deposit after " << i << " year(s) is " << deposit << endl; 
     }
-
-    int i = 0, j = 0;
-    uint8_t volatile *pReg;
-    int i = 16; const int *const ptr = \&i;
-    char true;
-    
     
 }
