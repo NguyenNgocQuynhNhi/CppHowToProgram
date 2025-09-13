@@ -1,3 +1,7 @@
+/*
+Fig. 5.6: Interest.cpp
+Compound-interest calculations with for.
+*/
 #include <iostream>
 #include <math.h>
 #include <iomanip>
