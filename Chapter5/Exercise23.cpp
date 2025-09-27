@@ -25,33 +25,67 @@ int main() {
     unsigned int asterisk_size = height - 2;
 
     for (int i = 0; i < height; i++) {
-        if (i == 0 || i == height - 1) {
-            for (int j = 0; j < height; j++) {
-                cout << '#';
-            }
+        cout << '#';
+    }
+    cout << '\n';
+
+    for (int i = 0; i < asterisk_size; i++) {
+        cout << '#';
+
+        unsigned int spacesN = min(i, (int)asterisk_size - 1 - i);
+        for (unsigned int space = 0; space < spacesN; space++) {
+            cout << ' ';
         }
-        else {
-            cout << '#';
 
-            int spacesN = min(i, (int)asterisk_size - 1 - i);
-            for (int space = 0; space < spacesN; space++) {
-                cout << ' ';
-            }
-
-            unsigned int asterisksN = height - spacesN * 2;
-            for (int asterisk = 0; asterisk < asterisksN; asterisk++) {
-                cout << '*';
-            }
-
-            for (int space = 0; space < spacesN; space++) {
-                cout << ' ';
-            }
-
-            cout << '#';
+        unsigned int asterisksN = asterisk_size - spacesN * 2;
+        for (unsigned int asterisk = 0; asterisk < asterisksN; asterisk++) {
+            cout << '*';
         }
+
+        for (unsigned int space = 0; space < spacesN; space++) {
+            cout << ' ';
+        }
+
+        cout << '#';
 
         cout << '\n';
     }
+
+    for (int i = 0; i < height; i++) {
+        cout << '#';
+    }
+
+
+    // for (int i = 0; i < height; i++) {
+    //     if (i == 0 || i == height - 1) {
+    //         for (int j = 0; j < height; j++) {
+    //             cout << '#';
+    //         }
+    //     }
+    //     else {
+    //         // cout << '#';
+
+    //         unsigned int spacesN = min(i - 1, (int)asterisk_size - 1 - i);
+    //         cout << "spacesN = " << spacesN << endl;
+    //         // for (int space = 0; space < spacesN; space++) {
+    //         //     cout << ' ';
+    //         // }
+
+    //         unsigned int asterisksN = height - spacesN * 2;
+    //         cout << "asterisksN = " << asterisksN << endl;
+    //         // for (int asterisk = 0; asterisk < asterisksN; asterisk++) {
+    //         //     cout << '*';
+    //         // }
+
+    //         // for (int space = 0; space < spacesN; space++) {
+    //         //     cout << ' ';
+    //         // }
+
+    //         // cout << '#';
+    //     }
+
+    //     cout << '\n';
+    // }
 
     // for (int i = 0; i < height; i++) {
     //     if (i == 0 || i == height - 1) {
